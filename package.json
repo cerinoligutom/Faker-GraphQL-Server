@@ -1,0 +1,49 @@
+{
+  "name": "faker-graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all pm2:*",
+    "lint": "tslint -p tsconfig.json",
+    "tsc": "tsc",
+    "clean": "rimraf ./dist",
+    "pm2:start-app": "pm2 start ecosystem.config.js",
+    "pm2:logs": "pm2 logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerino-ligutom/Faker-GraphQL-Server.git"
+  },
+  "author": {
+    "email": "zeferinix@gmail.com",
+    "name": "Cerino O. Ligutom III",
+    "url": "https://www.zeferinix.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerino-ligutom/Faker-GraphQL-Server/issues"
+  },
+  "homepage": "https://github.com/cerino-ligutom/Faker-GraphQL-Server#readme",
+  "devDependencies": {
+    "@types/compression": "0.0.36",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.9.4",
+    "dotenv": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
