@@ -11,17 +11,13 @@ export class User extends Model {
   username!: string;
   email!: string;
   avatarUrl!: string;
-  createdAt!: Date | string;
-  updatedAt!: Date | string;
+  createdAt!: string;
+  updatedAt!: string;
   hash!: string;
   salt!: string;
 
   // Optional eager relations
   todos?: Todo[];
-
-  $beforeUpdate() {
-    this.updatedAt = new Date();
-  }
 
   async $beforeInsert() {
     super.$beforeInsert();
@@ -31,8 +27,6 @@ export class User extends Model {
     this.hash = hash;
     this.salt = salt;
   }
-
-  // Table name is the only required property.
 
   // Methods can be defined for model classes just as you would for
   // any javascript class. If you want to include the result of these

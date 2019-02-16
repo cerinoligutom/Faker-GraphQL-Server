@@ -14,7 +14,9 @@ function getRandomIntBetweenTwoNumbers(min: number = 1, max: number = 10) {
 
 export async function seed(knex: Knex): Promise<any> {
   const USER_COUNT = 15;
+
   const users: any[] = [...Array(USER_COUNT)].fill(0).map(() => {
+    const date = new Date().toISOString();
     const user = {
       id: shortid.generate(),
       firstName: faker.name.firstName(),
@@ -23,7 +25,9 @@ export async function seed(knex: Knex): Promise<any> {
       email: faker.internet.email(),
       avatarUrl: faker.internet.avatar(),
       hash: faker.internet.password(),
-      salt: 'SEED GENERATED'
+      salt: 'SEED GENERATED',
+      createdAt: date,
+      updatedAt: date
     } as User;
 
     return user;
@@ -34,10 +38,13 @@ export async function seed(knex: Knex): Promise<any> {
     const TODO_COUNT = getRandomIntBetweenTwoNumbers(5, 15);
 
     const generatedTodos = [...Array(TODO_COUNT)].fill(0).map(() => {
+      const date = new Date().toISOString();
       const todo = {
         id: shortid.generate(),
         description: faker.lorem.sentence(),
-        ownerId: user.id
+        ownerId: user.id,
+        createdAt: date,
+        updatedAt: date
       } as Todo;
 
       return todo;

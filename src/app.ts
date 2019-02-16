@@ -3,7 +3,11 @@ import { env } from '@app/config/environment';
 import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
+
 import { maintenanceRouter } from './routes/maintenance.routes';
+
+import passport from 'passport';
+import './passport';
 
 const app = express();
 
@@ -11,6 +15,7 @@ const startApp = async () => {
   app.use(cors());
   app.use(express.json());
   app.use(compression());
+  app.use(passport.initialize());
 
   app.use('/api/maintenance', maintenanceRouter);
 

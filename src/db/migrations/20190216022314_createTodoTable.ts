@@ -8,8 +8,8 @@ export async function up(knex: Knex): Promise<any> {
     table.string('ownerId').notNullable();
     table.foreign('ownerId').references('id').inTable('users');
     table.boolean('isDone').notNullable().defaultTo(false);
-    table.timestamp('createdAt').defaultTo(knex.fn.now());
-    table.timestamp('updatedAt').defaultTo(knex.fn.now());
+    table.timestamp('createdAt').notNullable();
+    table.timestamp('updatedAt').notNullable();
   });
 };
 
