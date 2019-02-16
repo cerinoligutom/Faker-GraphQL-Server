@@ -11,7 +11,7 @@ passport.use(
       const user = await User.query().where('id', jwtPayload.userId).first();
 
       if (!user) {
-        done(undefined, false, { message: 'User not found.' });
+        throw new Error('User not found in database.');
       }
 
       done(undefined, user, { message: 'User found.' });
