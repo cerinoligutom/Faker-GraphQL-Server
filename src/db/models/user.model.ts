@@ -24,6 +24,7 @@ export class User extends Model {
   }
 
   async $beforeInsert() {
+    super.$beforeInsert();
     const salt = await passwordService.generateSalt();
     const hash = await passwordService.generateHash(this.hash, salt);
 
@@ -48,7 +49,7 @@ export class User extends Model {
   static get jsonSchema() {
     const schema: JsonSchema = {
       type: 'object',
-      required: ['firstName', 'lastName', 'username', 'hash', 'salt'],
+      required: ['firstName', 'lastName', 'username', 'hash'],
       properties: {
         id: { type: 'string' },
         firstName: { type: 'string', minLength: 1, maxLength: 255 },
@@ -56,7 +57,6 @@ export class User extends Model {
         email: { type: 'string' },
         username: { type: 'string' },
         hash: { type: 'string' },
-        salt: { type: 'string' }
       }
     };
     return schema;
