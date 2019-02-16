@@ -12,6 +12,7 @@ export async function up(knex: Knex): Promise<any> {
     table.timestamp('updatedAt').defaultTo(knex.fn.now());
     table.string('hash').notNullable();
     table.string('salt').notNullable();
+    table.unique(['username']);
   });
 }
 
