@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'Faker REST API',
+      name: 'Faker GraphQL API',
       script: 'index.js',
 
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
