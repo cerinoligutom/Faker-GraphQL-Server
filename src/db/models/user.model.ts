@@ -11,8 +11,8 @@ export class User extends Model {
   username!: string;
   email!: string;
   avatarUrl!: string;
-  createdAt!: Date;
-  updatedAt!: Date;
+  createdAt!: Date | string;
+  updatedAt!: Date | string;
   hash!: string;
   salt!: string;
 
@@ -48,7 +48,7 @@ export class User extends Model {
   static get jsonSchema() {
     const schema: JsonSchema = {
       type: 'object',
-      required: ['firstName', 'lastName', 'email', 'username', 'hash', 'salt'],
+      required: ['firstName', 'lastName', 'username', 'hash', 'salt'],
       properties: {
         id: { type: 'string' },
         firstName: { type: 'string', minLength: 1, maxLength: 255 },
