@@ -1,9 +1,10 @@
 import { Config } from 'knex';
 
-export const config: Config = {
+const config: Config = {
   client: 'sqlite3',
   connection: {
-    filename: './faker-server-graphql.db'
+    filename: './faker-server-graphql.db',
+    timezone: 'UTC'
   },
   useNullAsDefault: true,
   migrations: {
@@ -14,4 +15,5 @@ export const config: Config = {
   }
 };
 
-export default config;
+export default config; // For application use
+module.exports = config; // For CLI use
