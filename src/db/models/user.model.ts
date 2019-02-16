@@ -19,6 +19,19 @@ export class User extends Model {
   // Optional eager relations
   todos?: Todo[];
 
+  getDto() {
+    return {
+      id: this.id,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      username: this.username,
+      email: this.email,
+      avatarUrl: this.avatarUrl,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt
+    };
+  }
+
   async $beforeInsert() {
     super.$beforeInsert();
     const salt = await passwordService.generateSalt();

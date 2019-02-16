@@ -1,0 +1,12 @@
+type Todo {
+  id: ID!
+  isDone: Boolean!
+  description: String!
+  createdAt: String!
+  updatedAt: String!
+  owner: User!
+}
+
+extend type Query {
+  todo(id: ID!): Todo
+}

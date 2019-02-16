@@ -1,0 +1,16 @@
+overwrite: true
+schema: ./src/graphql/**/*.graphql
+watch: true
+generates:
+  typings/app-graphql-schema/index.d.ts:
+    config:
+      interfacePrefix: I
+      contextType: ../../src/utils/graphql/interfaces/IGraphQLContext#IGraphQLContext
+    plugins:
+      - typescript-common
+      - typescript-server
+      - typescript-resolvers
+
+  schema.graphql.json:
+    plugins:
+      - introspection

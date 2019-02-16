@@ -1,0 +1,16 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String
+  avatarUrl: String!
+  createdAt: String!
+  updatedAt: String!
+  todoList: [Todo]
+}
+
+extend type Query {
+  me: User
+  user(id: ID!): User
+}

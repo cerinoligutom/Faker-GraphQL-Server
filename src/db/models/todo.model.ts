@@ -6,10 +6,21 @@ export class Todo extends Model {
   static tableName = 'todos';
 
   description!: string;
+  isDone!: boolean;
   ownerId!: string;
 
   // Optional eager relations
   owner?: User;
+
+  getDto() {
+    return {
+      id: this.id,
+      isDone: this.isDone,
+      description: this.description,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt
+    }
+  }
 
   static get jsonSchema() {
     const schema: JsonSchema = {

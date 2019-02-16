@@ -6,6 +6,7 @@ import cors from 'cors';
 import express from 'express';
 import { scheduleJob } from 'node-schedule';
 
+import { initApolloGraphqlServer } from './graphql';
 import { maintenanceRouter } from './routes/maintenance.routes';
 
 import passport from 'passport';
@@ -20,6 +21,8 @@ const startApp = async () => {
   app.use(passport.initialize());
 
   app.use('/api/maintenance', maintenanceRouter);
+
+  initApolloGraphqlServer(app);
 
   // Reset DB every midnight
   scheduleJob('0 0 * * *', fireDate => {
