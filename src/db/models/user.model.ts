@@ -3,6 +3,17 @@ import { JsonSchema, RelationMappings } from 'objection';
 import { Model } from './common/Model';
 import { Todo } from './todo.model';
 
+export interface IUserDto {
+  id: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+  email: string;
+  avatarUrl: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export class User extends Model {
   static tableName = 'users';
 
@@ -29,7 +40,7 @@ export class User extends Model {
       avatarUrl: this.avatarUrl,
       createdAt: this.createdAt,
       updatedAt: this.updatedAt
-    };
+    } as IUserDto;
   }
 
   async $beforeInsert() {
@@ -63,7 +74,7 @@ export class User extends Model {
         lastName: { type: 'string', minLength: 1, maxLength: 255 },
         email: { type: 'string' },
         username: { type: 'string' },
-        hash: { type: 'string' },
+        hash: { type: 'string' }
       }
     };
     return schema;
@@ -79,7 +90,7 @@ export class User extends Model {
           to: 'todos.ownerId'
         }
       }
-    }
+    };
     return mappings;
   }
 }
