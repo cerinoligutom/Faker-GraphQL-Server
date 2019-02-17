@@ -9,7 +9,7 @@ export class User extends Model {
   firstName!: string;
   lastName!: string;
   username!: string;
-  email!: string;
+  email!: string | null | undefined;
   avatarUrl!: string;
   createdAt!: string;
   updatedAt!: string;

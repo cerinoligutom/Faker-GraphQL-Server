@@ -1,0 +1,21 @@
+extend type Mutation {
+  # Returns JWT Token on a successful login
+  login(username: String!, password: String!): LoginMutationResponse!
+  register(input: RegisterInput!): RegisterMutationResponse!
+}
+
+input RegisterInput {
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String
+  password: String!
+}
+
+type LoginMutationResponse {
+  token: String!
+}
+
+type RegisterMutationResponse {
+  success: Boolean!
+}
