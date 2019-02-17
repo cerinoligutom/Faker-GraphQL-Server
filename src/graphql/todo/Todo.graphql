@@ -4,9 +4,17 @@ type Todo {
   description: String!
   createdAt: String!
   updatedAt: String!
-  owner: User!
+  owner: User
 }
 
 extend type Query {
   todo(id: ID!): Todo
+  todos: [Todo]
+}
+
+extend type Mutation {
+  addTodo(description: String!): Todo!
+  deleteTodo(id: ID!): Boolean!
+  updateTodo(id: ID!, description: String!): Todo!
+  toggleTodoStatus(id: ID!): Todo!
 }

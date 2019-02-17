@@ -2,6 +2,15 @@ import { JsonSchema, RelationMappings } from 'objection';
 import { Model } from './common/Model';
 import { User } from './user.model';
 
+export interface ITodoDto {
+  id: string;
+  isDone: boolean;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+  ownerId: string;
+}
+
 export class Todo extends Model {
   static tableName = 'todos';
 
@@ -18,8 +27,9 @@ export class Todo extends Model {
       isDone: this.isDone,
       description: this.description,
       createdAt: this.createdAt,
-      updatedAt: this.updatedAt
-    }
+      updatedAt: this.updatedAt,
+      ownerId: this.ownerId
+    } as ITodoDto;
   }
 
   static get jsonSchema() {
