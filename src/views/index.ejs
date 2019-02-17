@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Faker GraphQL</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Faker GraphQL</title>
+    <meta
+      name="description"
+      content="A hosted GraphQL API ready to respond to your requests."
+    />
+    <meta name="author" content="Cerino O. Ligutom III (ZeferiniX™)" />
+    <meta
+      name="keywords"
+      content="JavaScript, NodeJS, Faker, GraphQL, Cerino, Ligutom, zeferinix"
+    />
+
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="welcome">
+      <div class="container">
+        <div class="brand">
+          <h3 class="brand-name">Faker GraphQL</h3>
+        </div>
+
+        <hr class="white-separator" />
+
+        <h3 class="heading">Test your front-end against a real GraphQL API</h3>
+        <div class="row highlights">
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="icon-container arrow_box">
+                <i class="fas fa-cloud-download-alt"></i>
+              </div>
+
+              <div class="details">
+                <h5>Fake data</h5>
+                <p>
+                  Data are auto generated with
+                  <span class="emphasize">Faker.js</span> daily.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="icon-container arrow_box">
+                <i class="fas fa-user-lock"></i>
+              </div>
+
+              <div class="details">
+                <h5>Authentication</h5>
+                <p>
+                  Practice with protected endpoints using
+                  <span class="emphasize">JWT</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-card">
+              <div class="icon-container arrow_box">
+                <i class="far fa-clock"></i>
+              </div>
+
+              <div class="details">
+                <h5>High availability</h5>
+                <p>
+                  <span class="emphasize">24/7 free access</span> for your
+                  development needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="heading">
+          A hosted GraphQL API ready to respond to your requests.
+        </h4>
+
+        <div class="get-started-button-container">
+          <a href="<%= graphqlEndpoint %>"
+            ><button class="get-started-button">Try the GraphQL Playground</button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="api-details">
+      <div class="container">
+        <h3 class="heading">API Details</h3>
+        <hr />
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="fas fa-cloud"></i>
+              </div>
+
+              <h6>Hosted on <span class="emphasize">DigitalOcean</span></h6>
+
+              <p>
+                Which means 99.99% Uptime SLA. The API is CORS enabled. All you
+                need to do is send POST requests to:
+              </p>
+
+              <code>
+                <%= graphqlEndpoint %>
+              </code>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-card">
+              <div class="icon-container">
+                <i class="fab fa-github"></i>
+              </div>
+
+              <h6>Open-source on GitHub</h6>
+
+              <p>
+                Feel free to submit a pull request to propose changes and add
+                more endpoints!
+              </p>
+
+              <code>
+                <%= githubRepositoryUrl %>
+              </code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="peace-of-mind">
+      <div class="container">
+        <h3 class="heading">Peace of mind</h3>
+        <hr />
+
+        <p>
+          You might think it's weird to be sending your data to a 3rd party API,
+          but I assure you, this API
+          <span class="emphasize"
+            >does not store any of your data permanently</span
+          >. Every midnight, server time, the database is wiped and seeded again
+          with the help of <span class="emphasize">Faker.js</span>.
+        </p>
+
+        <p>
+          All of the source code is open on
+          <a href="<%= githubRepositoryUrl %>">GitHub</a> so feel free to check
+          the implementation yourself and for your peace of mind.
+        </p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <hr />
+        <p>
+          Created by
+          <a href="<%= zeferinixSiteUrl %>"
+            >Cerino O. Ligutom III (ZeferiniX)</a
+          >
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
