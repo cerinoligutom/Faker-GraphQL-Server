@@ -7,4 +7,14 @@ export class MaintenanceController extends BaseController {
       status: 'OK'
     });
   }
+
+  serverTime(req: Request, res: Response) {
+    const now = new Date();
+    res.send({
+      utcTime: now.toUTCString(),
+      localTime: now.toString(),
+      ms: now.getTime(),
+      iso: now.toISOString()
+    });
+  }
 }
