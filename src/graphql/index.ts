@@ -31,7 +31,9 @@ export const initApolloGraphqlServer = (app: Express) => {
 
       return err;
     },
-    playground: true // Always make playground available
+    playground: true, // Always make playground available even in production
+    introspection: true
+    
   });
 
   app.use(graphQLRouter);
