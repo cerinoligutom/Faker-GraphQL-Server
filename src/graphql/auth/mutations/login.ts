@@ -4,7 +4,7 @@ import { UserInputError } from 'apollo-server-core';
 import {
   ILoginMutationResponse,
   MutationResolvers
-} from 'typings/app-graphql-schema';
+} from '@app/graphql-generated-schema';
 
 const login: MutationResolvers.LoginResolver = async (
   parent,

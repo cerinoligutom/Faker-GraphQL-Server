@@ -1,4 +1,4 @@
-import { TodoResolvers } from 'typings/app-graphql-schema';
+import { TodoResolvers } from '@app/graphql-generated-schema';
 
 const owner: TodoResolvers.OwnerResolver = async (parent, {}, { loaders }) => {
   const todo = await loaders.todoById.load(parent.id);

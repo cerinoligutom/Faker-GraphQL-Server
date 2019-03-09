@@ -1,5 +1,5 @@
 import { Todo } from '@app/models';
-import { QueryResolvers } from 'typings/app-graphql-schema';
+import { QueryResolvers } from '@app/graphql-generated-schema';
 
 const todos: QueryResolvers.TodosResolver = async (parent, {}, {}) => {
   const allTodos = await Todo.query();

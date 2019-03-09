@@ -1,6 +1,6 @@
 import { Todo } from '@app/models';
 import { UserInputError } from 'apollo-server-core';
-import { MutationResolvers } from 'typings/app-graphql-schema';
+import { MutationResolvers } from '@app/graphql-generated-schema';
 
 const updateTodo: MutationResolvers.UpdateTodoResolver = async (
   parent,

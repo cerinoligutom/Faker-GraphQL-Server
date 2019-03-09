@@ -3,7 +3,7 @@ import { UserInputError } from 'apollo-server-errors';
 import {
   IRegisterMutationResponse,
   MutationResolvers
-} from 'typings/app-graphql-schema';
+} from '@app/graphql-generated-schema';
 
 const register: MutationResolvers.RegisterResolver = async (
   parent,

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    container_name: faker_graphql
+    build: .
+    restart: always
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # https://stackoverflow.com/a/32785014
+    ports:
+      - "${PORT}:80"

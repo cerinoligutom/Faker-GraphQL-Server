@@ -1,5 +1,5 @@
 import { Todo } from '@app/models';
-import { MutationResolvers } from 'typings/app-graphql-schema';
+import { MutationResolvers } from '@app/graphql-generated-schema';
 
 const deleteTodo: MutationResolvers.DeleteTodoResolver = async (
   parent,
