@@ -18,4 +18,4 @@ RUN npm run seed
 
 EXPOSE 80
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "production" ]

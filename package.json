@@ -12,7 +12,8 @@
     "pm2:start-app": "pm2 start ecosystem.config.js",
     "pm2:logs": "pm2 logs",
     "seed": "knex --knexfile ./knexfile.ts seed:run",
-    "gql-gen": "gql-gen"
+    "gql-gen": "gql-gen",
+    "production": "node index.js"
   },
   "repository": {
     "type": "git",
