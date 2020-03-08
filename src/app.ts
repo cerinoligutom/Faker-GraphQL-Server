@@ -32,7 +32,7 @@ const startApp = async () => {
     const variables = {
       githubRepositoryUrl: 'https://github.com/cerino-ligutom/Faker-GraphQL-Server',
       zeferinixSiteUrl: 'https://www.zeferinix.com',
-      graphqlEndpoint: `http://faker-graphql.zeferinix.com/graphql`
+      graphqlEndpoint: `https://faker-graphql.zeferinix.com/graphql`
     }
     res.render('index', variables);
   });
