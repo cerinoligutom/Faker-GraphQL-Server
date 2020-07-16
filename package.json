@@ -72,7 +72,7 @@
     "graphql-shield": "^5.2.0",
     "jsonwebtoken": "^8.4.0",
     "knex": "^0.19.5",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "merge-graphql-schemas": "^1.5.8",
     "node-schedule": "^1.3.2",
     "objection": "^1.5.3",
