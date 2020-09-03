@@ -44,7 +44,7 @@
     "@types/passport-jwt": "^3.0.1",
     "@types/shortid": "0.0.29",
     "dotenv": "^6.2.0",
-    "graphql-code-generator": "^0.16.1",
+    "graphql-code-generator": "^0.18.2",
     "graphql-codegen-introspection": "^0.16.1",
     "graphql-codegen-typescript-common": "^0.16.1",
     "graphql-codegen-typescript-resolvers": "^0.16.1",
