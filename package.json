@@ -70,7 +70,7 @@
     "graphql-depth-limit": "^1.1.0",
     "graphql-middleware": "^3.0.2",
     "graphql-shield": "^5.2.0",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.19.5",
     "lodash": "^4.17.13",
     "merge-graphql-schemas": "^1.5.8",
